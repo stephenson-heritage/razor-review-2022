@@ -1,0 +1,65 @@
+@page
+@model razor_review.Pages.School.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>School</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="School.SchoolId" />
+            <div class="form-group">
+                <label asp-for="School.Name" class="control-label"></label>
+                <input asp-for="School.Name" class="form-control" />
+                <span asp-validation-for="School.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="School.StreetNumber" class="control-label"></label>
+                <input asp-for="School.StreetNumber" class="form-control" />
+                <span asp-validation-for="School.StreetNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="School.StreetName" class="control-label"></label>
+                <input asp-for="School.StreetName" class="form-control" />
+                <span asp-validation-for="School.StreetName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="School.PostalCode" class="control-label"></label>
+                <input asp-for="School.PostalCode" class="form-control" />
+                <span asp-validation-for="School.PostalCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="School.City" class="control-label"></label>
+                <input asp-for="School.City" class="form-control" />
+                <span asp-validation-for="School.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="School.Province" class="control-label"></label>
+                <input asp-for="School.Province" class="form-control" />
+                <span asp-validation-for="School.Province" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="School.Phone" class="control-label"></label>
+                <input asp-for="School.Phone" class="form-control" />
+                <span asp-validation-for="School.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
